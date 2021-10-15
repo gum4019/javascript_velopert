@@ -15,11 +15,11 @@
       function countBiggerThanTen(numbers) {
         let count = 0;
 
-        numbers.forEach((element) => {
-          if (element > 10) {
+        numbers.reduce((acc, current) => {
+          if (current > 10) {
             count++;
           }
-        });
+        }, 0);
 
         return count;
       }
